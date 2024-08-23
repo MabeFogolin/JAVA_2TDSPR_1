@@ -1,22 +1,17 @@
 package com._tdspr.mariabeatriz.domains;
 
-import lombok.*;
-import lombok.experimental.SuperBuilder;
+import jakarta.persistence.MappedSuperclass;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@MappedSuperclass
 public class Pessoa {
+
     private String primeiroNome;
     private String sobrenome;
     private String documento;
-
-//    public Pessoa(String primeiroNome, String sobrenome, String documento) {
-//        this.primeiroNome = primeiroNome;
-//        this.sobrenome = sobrenome;
-//        this.documento = documento;
-//    }
-//
-//    public Pessoa() {
-//    }
 }

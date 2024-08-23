@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 class CadastrarAlunoImplTest {
 
     //Como a classe impl está implementando, ela é tambpem a outra
-    CadastrarAluno cadastraAluno = new CadastrarAlunoImpl();
+    CadastrarAluno cadastraAluno = new CadastrarAlunoImpl(null);
 
     @Test
     @DisplayName("Testa as informações do objeto aluno a ser cadastrado foram corretamente copiadas para um novo objeto")
@@ -20,7 +20,7 @@ class CadastrarAlunoImplTest {
         alunoParaCadastrar.setPrimeiroNome("Maria");
         alunoParaCadastrar.setSobrenome("Fogolin");
         //Quando algo acontecer, Act, Actual
-        Aluno alunoCadastrado = cadastraAluno.executar(alunoParaCadastrar);
+        Aluno alunoCadastrado = cadastraAluno.executa(alunoParaCadastrar);
 
         //Verifique uma determinada info, Asser
         Assertions.assertEquals(alunoParaCadastrar.getPrimeiroNome(), alunoCadastrado.getPrimeiroNome(), "Deve copiar o primeiroNome do objeto 1 para o segundo objeto");

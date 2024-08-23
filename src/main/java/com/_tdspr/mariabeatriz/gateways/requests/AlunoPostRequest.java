@@ -30,5 +30,5 @@ package com._tdspr.mariabeatriz.gateways.requests;
  * </ul>
  */
 
-public record AlunoPostRequests(String nomeCompleto, String documento, String registro) {
+public record AlunoPostRequest(String nomeCompleto, String documento, String registro) {
 }
